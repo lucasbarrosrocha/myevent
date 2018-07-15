@@ -1,9 +1,14 @@
 package daca.myevent.myevent.models.user;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+
+import daca.myevent.myevent.models.myevent.MyEvent;
 
 @Entity
 public class User {
@@ -15,12 +20,16 @@ public class User {
 	private String cpf;
 	private String phone;
 	private String email;
+	@OneToOne
+	@JoinColumn(name = "id",referencedColumnName="id")
+	private MyEvent event;
 
 	public User(String name, String cpf, String phone, String email) {
 		this.name = name;
 		this.cpf = cpf;
 		this.phone = phone;
 		this.email = email;
+		this.event = new MyEvent();
 	}
 
 	public Integer getId() {
