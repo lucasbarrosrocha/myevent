@@ -1,4 +1,4 @@
-package daca.myevent.myevent.models.objects;
+package daca.myevent.myevent.models.product;
 
 import javax.persistence.Entity;
 
@@ -7,8 +7,8 @@ public class Entertainment extends Product {
 
 	private EntertainmentEnum subType;
 	
-	public Entertainment(String description, float price, EntertainmentEnum subType) {
-		super(description, price);
+	public Entertainment(String title, String description, float price, EntertainmentEnum subType) {
+		super(title, description, price);
 		this.subType = subType;
 	}
 

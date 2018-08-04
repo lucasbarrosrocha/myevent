@@ -10,6 +10,6 @@ public class EventController {
 	@RequestMapping("/")
 	@ResponseBody
 	public String printHello() {
-		return "Hello";
+		return "Welcome to My Event app.";
 	}
 }

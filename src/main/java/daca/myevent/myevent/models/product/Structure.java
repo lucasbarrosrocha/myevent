@@ -1,4 +1,4 @@
-package daca.myevent.myevent.models.objects;
+package daca.myevent.myevent.models.product;
 
 import javax.persistence.Entity;
 
@@ -7,8 +7,8 @@ public class Structure extends Product {
 
 	private StructureEnum subType;
 	
-	public Structure(String description, float price, StructureEnum subType) {
-		super(description, price);
+	public Structure(String title, String description, float price, StructureEnum subType) {
+		super(title, description, price);
 		this.subType = subType;
 	}
 

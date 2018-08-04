@@ -15,14 +15,21 @@ public class Contracted extends User {
 	
 	
 	public Contracted(String name, String cpf, String phone, 
-			String email, String otherPhone, String description) {
-		super(name, cpf, phone, email);
+			String email, String password, String otherPhone, String description) {
+		super(name, cpf, phone, email, password);
 		// TODO Auto-generated constructor stub
 		this.cnpj = cnpj;
 		this.otherPhone = otherPhone;
 		this.description = description;
 	}
-
+	
+	public Contracted() {
+		super();
+		// TODO Auto-generated constructor stub
+		this.cnpj = "";
+		this.otherPhone = "";
+		this.description = "";
+	}
 
 	public String getCnpj() {
 		return cnpj;

@@ -1,4 +1,4 @@
-package daca.myevent.myevent.models.myevent;
+package daca.myevent.myevent.models.event;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,10 +12,10 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 
-import daca.myevent.myevent.models.objects.Product;
+import daca.myevent.myevent.models.product.Product;
 
 @Entity
-public class MyEvent {
+public class Event {
 
 	@Id
     @GeneratedValue(strategy=GenerationType.AUTO)
@@ -25,7 +25,7 @@ public class MyEvent {
 	@JoinColumn(name = "id",referencedColumnName="id")
 	private List<Product> myEvent;
 	
-	public MyEvent() {
+	public Event() {
 		this.myEvent = new ArrayList<Product>();
 	}
 
